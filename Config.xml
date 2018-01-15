@@ -1,0 +1,156 @@
+﻿<PD>
+	<HeaderInfo>
+		<Header>Primary Business Segment</Header>
+		<Column>D</Column>
+	</HeaderInfo>
+	<HeaderInfo>
+		<Header>Primary Product Line</Header>
+		<Column>E</Column>
+	</HeaderInfo>
+	<HeaderInfo>
+		<Header>Project Name</Header>
+		<Column>B</Column>
+	</HeaderInfo>
+	<HeaderInfo>
+		<Header>OP Number</Header>
+		<Column>C</Column>
+	</HeaderInfo>
+	<HeaderInfo>
+		<Header>Design Review Type</Header>
+		<Column>L</Column>
+	</HeaderInfo>
+
+	<DesignReviewType id="cdr">
+		<Name>CDR</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<DesignReviewType id="ddr">
+		<Name>DDR</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<DesignReviewType id="pdr">
+		<Name>PDR</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<DesignReviewType id="rta">
+		<Name>RTA</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<DesignReviewType id="rtl">
+		<Name>RTL</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<DesignReviewType id="-">
+		<Name>-</Name>
+		<Header>Project Name</Header>
+		<Header>OP#</Header>
+		<Header>Project Type</Header>
+		<Header>Primary Product Line</Header>
+		<Header>Decision</Header>
+		<Header>Decision Date</Header>
+		<Header>Date of Review</Header>
+		<Header>Gate 2 Actual</Header>
+		<Header>Gate 3A Actual</Header>
+		<Header>Gate 3B Actual</Header>
+		<Header>Gate 3C Actual</Header>
+		<Header>Recommendation to Gatekeepers and Comments</Header>
+		<Header>TRL</Header>
+	</DesignReviewType>
+	
+	<Summary>
+	
+		<Header>CDR Decision</Header>
+		<Header>CDR Date</Header>
+		<Header>DDR Decision</Header>
+		<Header>DDR Date</Header>
+		<Header>PDR Decision</Header>
+		<Header>PDR Date</Header>
+		<Header>RTA Decision</Header>
+		<Header>RTA Date</Header>
+		<Header>RTL Decision</Header>
+		<Header>RTL Date</Header>
+		<ForEach>
+			<!--
+			Any Headers placed under ForEach will be repeated for every design review type
+			-->
+			<Header>Recommendation to Gatekeepers and Comments</Header>
+		</ForEach>
+	</Summary>
+	
+	<Totals>
+		<Header>TRL</Header>
+		<Header>Project Status</Header>
+		<Header>Project Type</Header>
+		<ForEach>
+			<!--
+			Any Headers placed under ForEach will be repeated for every design review type
+			-->
+			<Header>Decision</Header>
+		</ForEach>
+	</Totals>
+</PD>
