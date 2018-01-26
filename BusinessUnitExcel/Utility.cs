@@ -10,7 +10,13 @@ namespace BusinessUnitExcel
     {
 
         public static BusinessUnitOrganizerForm form_ref;
-        // Debug function to log 
+
+        /// <summary>
+        /// Debug function to log 
+        /// </summary>
+        /// <typeparam name="T">type of data</typeparam>
+        /// <param name="id">identifier string</param>
+        /// <param name="message">message</param>
         public static void Log<T>(string id, T message)
         {
             TextBox log = form_ref.LogBox;
@@ -19,13 +25,22 @@ namespace BusinessUnitExcel
             log.AppendText(".\n");
         }
 
+        /// <summary>
+        /// makes sure returned value is not null if given data is
+        /// </summary>
+        /// <param name="dat">data</param>
+        /// <returns>'-' if dat is null, dat otherwise</returns>
         public static string AvoidNull(string dat)
         {
             return dat == null ? "-" : dat;
         }
 
-        // Convert String column index to int by using base 26 conversion
-        public static int ConvertColumnLetterToNum(String column_letter)
+        /// <summary>
+        /// Convert String column index to int by using base 26 conversion
+        /// </summary>
+        /// <param name="column_letter">the column letter</param>
+        /// <returns>column number equivalent</returns>
+        public static int ConvertColumnLetterToNum(string column_letter)
         {
             int column_num = 0;
             char a = 'A';
@@ -41,8 +56,12 @@ namespace BusinessUnitExcel
             return column_num;
         }
 
-        // Convert column number to String of Letters
-        public static String ConvertNumToColumnLetters(int column_num)
+        /// <summary>
+        /// Convert column number to String of Letters
+        /// </summary>
+        /// <param name="column_num">the number of the column</param>
+        /// <returns>the Letter equivalent of the column number</returns>
+        public static string ConvertNumToColumnLetters(int column_num)
         {
             if (column_num == 0)
             {
@@ -72,10 +91,15 @@ namespace BusinessUnitExcel
 
             char[] chars = builder.ToString().ToCharArray();
             Array.Reverse(chars);
-            return new String(chars);
+            return new string(chars);
         }
 
-        public static String Format_Int(String number)
+        /// <summary>
+        /// Formats number with commas
+        /// </summary>
+        /// <param name="number">the number to format</param>
+        /// <returns>formatted number ex) 1000 -> 1,000</returns>
+        public static string Format_Int(string number)
         {
             StringBuilder sb_num = new StringBuilder();
             for (int i = 0; i < number.Length; i++)
@@ -86,7 +110,7 @@ namespace BusinessUnitExcel
                 }
 
             }
-            String num = sb_num.ToString();
+            string num = sb_num.ToString();
             num = num.Replace(",", "");
 
             int length = num.Length;
@@ -95,12 +119,33 @@ namespace BusinessUnitExcel
                 num = num.Insert(length - 3, ",");
                 length -= 3;
             }
-
-
+            
             return num;
         }
 
-        public static String ConvertDateToString(DateTime date)
+        /// <summary>
+        /// Makes sure a string contains only letters
+        /// </summary>
+        /// <param name="str_col">the string</param>
+        /// <returns>true if str_col contains only letters</returns>
+        public static bool IsValidColumnLetter(string str_col)
+        {
+            foreach(char c in str_col)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Date format MM/dd/yyyy
+        /// </summary>
+        /// <param name="date">the date to be formatted</param>
+        /// <returns>string representation of date</returns>
+        public static string ConvertDateToString(DateTime date)
         {
             if (date == DateTime.MinValue)
             {
@@ -109,6 +154,11 @@ namespace BusinessUnitExcel
             return date.ToString("MM/dd/yyyy");
         }
 
+        /// <summary>
+        /// Converts double to date
+        /// </summary>
+        /// <param name="date">the decimal OA representation of a date</param>
+        /// <returns>DateTime equivalent to date</returns>
         public static DateTime ConvertToDate(double date)
         {
             return DateTime.FromOADate(date);
@@ -120,7 +170,7 @@ namespace BusinessUnitExcel
         /// <param name="col"></param>
         /// <param name="num_rows"></param>
         /// <returns></returns>
-        public static String GetColumnRange(int col, long start_row, long end_row)
+        public static string GetColumnRange(int col, long start_row, long end_row)
         {
             return GetRangeText(col, start_row, col, end_row);
         }
@@ -132,7 +182,7 @@ namespace BusinessUnitExcel
         /// <param name="start_col"></param>
         /// <param name="end_col"></param>
         /// <returns></returns>
-        public static String GetRowRange(long row, int start_col, int end_col)
+        public static string GetRowRange(long row, int start_col, int end_col)
         {
             return GetRangeText(start_col, row, end_col, row);
         }
@@ -145,7 +195,7 @@ namespace BusinessUnitExcel
         /// <param name="col_end"></param>
         /// <param name="row_end"></param>
         /// <returns></returns>
-        public static String GetRangeText(int col_start, long row_start, int col_end, long row_end)
+        public static string GetRangeText(int col_start, long row_start, int col_end, long row_end)
         {
             return ConvertNumToColumnLetters(col_start) + row_start + ":" + ConvertNumToColumnLetters(col_end) + row_end;
         }

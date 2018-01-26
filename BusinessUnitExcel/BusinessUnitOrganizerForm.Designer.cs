@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusinessUnitOrganizerForm));
             this.button_open_file = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.textbox_column_start = new System.Windows.Forms.TextBox();
@@ -143,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(241, 317);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textbox_log);
@@ -154,6 +156,8 @@
             this.Controls.Add(this.button_process_data);
             this.Controls.Add(this.textbox_column_start);
             this.Controls.Add(this.button_open_file);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BusinessUnitOrganizerForm";
             this.Text = "PD Report Generator";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BusinessUnitOrganizerForm_FormClosed);

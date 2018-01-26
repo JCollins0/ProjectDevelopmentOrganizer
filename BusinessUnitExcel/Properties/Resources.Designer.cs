@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusinessUnitExcel.Properties
-{
-
-
+namespace BusinessUnitExcel.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,128 @@ namespace BusinessUnitExcel.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BusinessUnitExcel.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the column letter that data starts on.
+        /// </summary>
+        internal static string column_start_tooltip {
+            get {
+                return ResourceManager.GetString("column_start_tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;PD&gt;
+        ///	&lt;HeaderInfo&gt;
+        ///		&lt;Header&gt;Primary Business Segment&lt;/Header&gt;
+        ///		&lt;Column&gt;D&lt;/Column&gt;
+        ///	&lt;/HeaderInfo&gt;
+        ///	&lt;HeaderInfo&gt;
+        ///		&lt;Header&gt;Primary Product Line&lt;/Header&gt;
+        ///		&lt;Column&gt;E&lt;/Column&gt;
+        ///	&lt;/HeaderInfo&gt;
+        ///	&lt;HeaderInfo&gt;
+        ///		&lt;Header&gt;Project Name&lt;/Header&gt;
+        ///		&lt;Column&gt;B&lt;/Column&gt;
+        ///	&lt;/HeaderInfo&gt;
+        ///	&lt;HeaderInfo&gt;
+        ///		&lt;Header&gt;OP Number&lt;/Header&gt;
+        ///		&lt;Column&gt;C&lt;/Column&gt;
+        ///	&lt;/HeaderInfo&gt;
+        ///	&lt;HeaderInfo&gt;
+        ///		&lt;Header&gt;Design Review Type&lt;/Header&gt;
+        ///		&lt;Column&gt;L&lt;/Column&gt;
+        ///	&lt;/HeaderInfo&gt;
+        ///
+        ///	&lt;DesignReviewType id=&quot;cdr&quot;&gt;
+        ///		&lt;Name&gt;CDR&lt;/Name&gt;
+        ///	 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Config {
+            get {
+                return ResourceManager.GetString("Config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the row number of the last data entry.
+        /// </summary>
+        internal static string row_end_tooltip {
+            get {
+                return ResourceManager.GetString("row_end_tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the row number of the headers.
+        /// </summary>
+        internal static string row_start_tooltip {
+            get {
+                return ResourceManager.GetString("row_start_tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        internal static string sheet_name_summary {
+            get {
+                return ResourceManager.GetString("sheet_name_summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Totals.
+        /// </summary>
+        internal static string sheet_name_totals {
+            get {
+                return ResourceManager.GetString("sheet_name_totals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design Review Type.
+        /// </summary>
+        internal static string string_design_review_type {
+            get {
+                return ResourceManager.GetString("string_design_review_type", resourceCulture);
             }
         }
     }
